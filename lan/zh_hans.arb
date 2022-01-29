@@ -27,9 +27,9 @@
     "intro2SendTitle": "发送",
     "intro2SendDescription": "您可以分享图片、视频、文件和文本",
     "intro3ReceiveTitle": "接收",
-    "intro3ReceiveDescription": "请在其他设备的浏览器上打开链接。若您在两台设备上都安装了 Sharik，您也可以使用接收功能。",
+    "intro3ReceiveDescription": "请在其他设备的浏览器上打开链接。若您在两台设备上都安装了 Share me，您也可以使用接收功能。",
     "intro4EverywhereTitle": "EVERYWERE",
-    "intro4EverywhereDescription": "Sharik 可用于所有主流手机及桌面平台。另外，这是一款开源、自由、无广告的应用。\n点此了解详情",
+    "intro4EverywhereDescription": "Share me 可用于所有主流手机及桌面平台。另外，这是一款开源、自由、无广告的应用。\n点此了解详情",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "已安装版本",
     "aboutLatestVersion": "最新版本",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "开源许可",
     "aboutTrackingPolicy": "跟踪政策",
     "aboutContributors": "贡献者",
-    "aboutSharikText": "Sharik 是一个自由软件，其代码托管在 GitHub 上。\n欢迎各位参与贡献 :>",
+    "aboutSharemeText": "Share me 是一个自由软件，其代码托管在 GitHub 上。\n欢迎各位参与贡献 :>",
     "aboutChangelog": "更新日志​​​​​",
     "aboutLicenses": "Licenses",
     "aboutPrivacyPolicy": "隐私政策",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "禁用屏幕过渡动画",
     "settingsDisableBlur": "禁用模糊功能",
     "settingsDisableTracking": "禁用跟踪",
-    "settingsTrackingDescription": "Sharik 纳入了尊重隐私的跟踪，以更多地了解该应用的用户。 我们正在使用分析数据来规划新的功能和确定任务的优先次序。\n\n收集到的信息不包括IP地址或任何其他身份识别信息。"
+    "settingsTrackingDescription": "Share me 纳入了尊重隐私的跟踪，以更多地了解该应用的用户。 我们正在使用分析数据来规划新的功能和确定任务的优先次序。\n\n收集到的信息不包括IP地址或任何其他身份识别信息。"
 }

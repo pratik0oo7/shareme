@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, always_use_package_imports, require_trailing_commas
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

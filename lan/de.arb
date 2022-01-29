@@ -27,9 +27,9 @@
     "intro2SendTitle": "SENDEN",
     "intro2SendDescription": "Du kannst Bilder, Videos, Dateien und Text teilen",
     "intro3ReceiveTitle": "EMPFANG",
-    "intro3ReceiveDescription": "Öffne den Link auf einem anderen Gerät in jedem Webbrowser. Wenn du Sharik auf beiden Geräten hast, kannst du auch die Empfänger-Funktion verwenden",
+    "intro3ReceiveDescription": "Öffne den Link auf einem anderen Gerät in jedem Webbrowser. Wenn du Share me auf beiden Geräten hast, kannst du auch die Empfänger-Funktion verwenden",
     "intro4EverywhereTitle": "JEDER",
-    "intro4EverywhereDescription": "Sharik ist für alle wichtigen Mobil- und Desktop-Plattformen verfügbar. Auch ist es kostenlos, es hat keine Werbung, und sein Code ist online veröffentlicht.\nKlicke hier, um mehr zu erfahren",
+    "intro4EverywhereDescription": "Share me ist für alle wichtigen Mobil- und Desktop-Plattformen verfügbar. Auch ist es kostenlos, es hat keine Werbung, und sein Code ist online veröffentlicht.\nKlicke hier, um mehr zu erfahren",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "Installierte Version",
     "aboutLatestVersion": "Die neueste Version",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "Open Source-Lizenzen",
     "aboutTrackingPolicy": "Tracking-Richtlinie",
     "aboutContributors": "Beitragende",
-    "aboutSharikText": "Sharik ist mit seinem auf GitHub veröffentlichten Code völlig kostenlos.\nJeder ist herzlich willkommen :>",
+    "aboutSharemeText": "Share me ist mit seinem auf GitHub veröffentlichten Code völlig kostenlos.\nJeder ist herzlich willkommen :>",
     "aboutChangelog": "Änderungsprotokoll",
     "aboutLicenses": "Lizenzen",
     "aboutPrivacyPolicy": "Datenschutzerklärung",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Disable screen transitions",
     "settingsDisableBlur": "Disable blur",
     "settingsDisableTracking": "Disable tracking",
-    "settingsTrackingDescription": "Sharik incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
+    "settingsTrackingDescription": "Share me incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
 }

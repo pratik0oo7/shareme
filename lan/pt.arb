@@ -27,9 +27,9 @@
     "intro2SendTitle": "ENVIAR",
     "intro2SendDescription": "Pode partilhar imagens, vídeos, ficheiros e texto",
     "intro3ReceiveTitle": "RECEBER",
-    "intro3ReceiveDescription": "Abra a hiperligação noutro dispositivo em qualquer navegador da Internet. Se tiver o Sharik instalado em ambos os dispositivos, também pode usar a função de receptor",
+    "intro3ReceiveDescription": "Abra a hiperligação noutro dispositivo em qualquer navegador da Internet. Se tiver o Share me instalado em ambos os dispositivos, também pode usar a função de receptor",
     "intro4EverywhereTitle": "EM TODO O LADO",
-    "intro4EverywhereDescription": "O Sharik está disponível para todas as principais plataformas de telemóveis e computadores de mesa. Além disso é gratuito, não tem anúncios e o código-fonte está disponível na Internet.\nClique aqui para saber mais",
+    "intro4EverywhereDescription": "O Share me está disponível para todas as principais plataformas de telemóveis e computadores de mesa. Além disso é gratuito, não tem anúncios e o código-fonte está disponível na Internet.\nClique aqui para saber mais",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "Versão instalada",
     "aboutLatestVersion": "A última versão",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "Licenças de código aberto",
     "aboutTrackingPolicy": "Política de rastreamento",
     "aboutContributors": "Colaboradores",
-    "aboutSharikText": "O Sharik é completamente gratuito e com o código-fonte disponível no GitHub.\nTodos podem colaborar :>",
+    "aboutSharemeText": "O Share me é completamente gratuito e com o código-fonte disponível no GitHub.\nTodos podem colaborar :>",
     "aboutChangelog": "Registo de alterações",
     "aboutLicenses": "Licenças",
     "aboutPrivacyPolicy": "Política de privacidade",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Desativar transições do ecrã",
     "settingsDisableBlur": "Desativar desfocagem",
     "settingsDisableTracking": "Desativar rastreamento",
-    "settingsTrackingDescription": "O Sharik incorpora um rastreamento, que respeita a privacidade, para saber mais sobre os utilizadores da aplicação. Estamos a usar os dados de análise para planear novas funcionalidades e priorizar tarefas.\n\nAs informações recolhidas não incluem o endereço IP ou qualquer outra informação de identificação."
+    "settingsTrackingDescription": "O Share me incorpora um rastreamento, que respeita a privacidade, para saber mais sobre os utilizadores da aplicação. Estamos a usar os dados de análise para planear novas funcionalidades e priorizar tarefas.\n\nAs informações recolhidas não incluem o endereço IP ou qualquer outra informação de identificação."
 }

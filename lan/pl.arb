@@ -27,9 +27,9 @@
     "intro2SendTitle": "WYSYŁANIE",
     "intro2SendDescription": "Możesz udostępniać obrazy, filmy, pliki oraz tekst",
     "intro3ReceiveTitle": "ODBIERANIE",
-    "intro3ReceiveDescription": "Otwórz odnośnik na innym urządzeniu w dowolnej przeglądarce internetowej. Jeśli posiadasz Sharik na obu urządzeniach, możesz użyć Trybu odbierania",
+    "intro3ReceiveDescription": "Otwórz odnośnik na innym urządzeniu w dowolnej przeglądarce internetowej. Jeśli posiadasz Share me na obu urządzeniach, możesz użyć Trybu odbierania",
     "intro4EverywhereTitle": "GDZIEKOLWIEK",
-    "intro4EverywhereDescription": "Sharik jest dostępny na wszystkich popularnych platformach mobilnych oraz komputerowych. Oprócz tego, jest darmowy i nie zawiera reklam, a jego kod źródłowy jest opublikowany w sieci.\nKliknij tutaj, aby dowiedzieć się więcej",
+    "intro4EverywhereDescription": "Share me jest dostępny na wszystkich popularnych platformach mobilnych oraz komputerowych. Oprócz tego, jest darmowy i nie zawiera reklam, a jego kod źródłowy jest opublikowany w sieci.\nKliknij tutaj, aby dowiedzieć się więcej",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "Zainstalowana wersja",
     "aboutLatestVersion": "Najnowsza wersja",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "Licencje Open Source",
     "aboutTrackingPolicy": "Polityka śledzenia",
     "aboutContributors": "Współtwórcy",
-    "aboutSharikText": "Sharik jest całkowicie darmowy, a jego kod źródłowy jest opublikowany na GitHub.\nZachęcamy każdego do udzielenia się :>",
+    "aboutSharemeText": "Share me jest całkowicie darmowy, a jego kod źródłowy jest opublikowany na GitHub.\nZachęcamy każdego do udzielenia się :>",
     "aboutChangelog": "Historia zmian",
     "aboutLicenses": "Licencje",
     "aboutPrivacyPolicy": "Polityka prywatności",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Wyłącz przejścia ekranu",
     "settingsDisableBlur": "Wyłącz rozmycie",
     "settingsDisableTracking": "Wyłącz śledzenie",
-    "settingsTrackingDescription": "Sharik zawiera szanujące prywatność śledzenie w celu uzyskania informacji o odbiorcach aplikacji. Używamy danych analitycznych do planowania nowych funkcji i usprawniania rozwoju.\n\nZgromadzone dane nie zawierają adresów IP ani żadnych innych informacji umożliwiających identyfikację."
+    "settingsTrackingDescription": "Share me zawiera szanujące prywatność śledzenie w celu uzyskania informacji o odbiorcach aplikacji. Używamy danych analitycznych do planowania nowych funkcji i usprawniania rozwoju.\n\nZgromadzone dane nie zawierają adresów IP ani żadnych innych informacji umożliwiających identyfikację."
 }

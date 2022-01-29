@@ -28,9 +28,9 @@
   "intro2SendTitle": "送信",
   "intro2SendDescription": "画像、ビデオ、ファイル、テキストを送信できます。",
   "intro3ReceiveTitle": "受信",
-  "intro3ReceiveDescription": "リンクはほかのデバイスのWEBブラウザで見ることができます。 \nもしSharikが両方のデバイスにインストールされていれば、受信機能をご利用いただけます。",
+  "intro3ReceiveDescription": "リンクはほかのデバイスのWEBブラウザで見ることができます。 \nもしShare meが両方のデバイスにインストールされていれば、受信機能をご利用いただけます。",
   "intro4EverywhereTitle": "どこでも",
-  "intro4EverywhereDescription": "Sharikはほとんどのスマートフォン、コンピューターに対応しています。\nまた、広告がなく無料で、ソースコードはオンライン上で公開されています。\nここをクリックすることでソースコードを閲覧できます。",
+  "intro4EverywhereDescription": "Share meはほとんどのスマートフォン、コンピューターに対応しています。\nまた、広告がなく無料で、ソースコードはオンライン上で公開されています。\nここをクリックすることでソースコードを閲覧できます。",
 
   "@_ABOUT_PAGE": {},
   "aboutInstalledVersion": "現在のバージョン",
@@ -42,7 +42,7 @@
   "aboutOpenSourceLicenses": "ソースコードのライセンスを確認します",
   "aboutTrackingPolicy": "トラッキングポリシー",
   "aboutContributors": "貢献者",
-  "aboutSharikText": "SharikはGitHubに無料で公開されています。\n多くの人があなたの貢献を歓迎しています :>",
+  "aboutSharemeText": "Share meはGitHubに無料で公開されています。\n多くの人があなたの貢献を歓迎しています :>",
   "aboutChangelog": "変更履歴",
   "aboutLicenses": "ライセンス",
   "aboutPrivacyPolicy": "プライバシーポリシー",
@@ -78,5 +78,5 @@
   "settingsDisableScreenTransitions": "画面がオフになるのを無効にする",
   "settingsDisableBlur": "Blur効果を無効にする",
   "settingsDisableTracking": "追跡を無効にする",
-  "settingsTrackingDescription": "Sharikはこのアプリを使ってくださる方を尊重し、プライバシーを重視して、トラッキングしています。 私たちは、新機能を実装するためにこの機能を使ったり、優先する仕事のために使います。\n\n収集されたデータにはIPアドレスなど、個人を特定できるものは含まれません。"
+  "settingsTrackingDescription": "Share meはこのアプリを使ってくださる方を尊重し、プライバシーを重視して、トラッキングしています。 私たちは、新機能を実装するためにこの機能を使ったり、優先する仕事のために使います。\n\n収集されたデータにはIPアドレスなど、個人を特定できるものは含まれません。"
 }

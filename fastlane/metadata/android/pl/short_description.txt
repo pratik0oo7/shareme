@@ -1,1 +1,0 @@
-Międzyplatformowa aplikacja do przesyłania plików w sieci lokalnej

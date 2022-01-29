@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, always_use_package_imports
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,6 +10,7 @@ import 'package:shareme/navigators%20&%20view/grid.dart';
 import 'package:shareme/navigators%20&%20view/page_route.dart';
 import 'package:shareme/service/languageservice.dart';
 
+import '../configfile.dart';
 import '../helper.dart';
 import '../service/languageservice.dart';
 
@@ -27,7 +28,10 @@ class LanguagePickerScreen extends StatelessWidget {
           final set = context.read<Languagemanager>().isLanguageSet;
           if (set) {
             SharemeRoute.navigateTo(
-                _globalKey, Screens.languagePicker, RouteDirection.right);
+              _globalKey,
+              Screens.languagePicker,
+              RouteDirection.right,
+            );
 
             return false;
           }
@@ -36,33 +40,33 @@ class LanguagePickerScreen extends StatelessWidget {
         },
         child: Scaffold(
           body: ListView(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              children: [
-                const SafeArea(
-                  bottom: false,
-                  left: false,
-                  right: false,
-                  child: SizedBox(
-                    height: 22,
-                  ),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            children: [
+              const SafeArea(
+                bottom: false,
+                left: false,
+                right: false,
+                child: SizedBox(
+                  height: 22,
                 ),
-                // Hero(tag: 'icon', child: SharikLogo()),
-                const SizedBox(
-                  height: 24,
+              ),
+              // Hero(tag: 'icon', child: SharikLogo()),
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                'Select the language\nyou are familiar with',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.getFont(
+                  'Comfortaa',
+                  fontSize: 22,
                 ),
-                Text(
-                  'Select the language\nyou are familiar with',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.getFont(
-                    'Comfortaa',
-                    fontSize: 22,
-                  ),
-                ),
-                const SizedBox(height: 24),
-                LayoutBuilder(builder: (context, constraints) {
+              ),
+              const SizedBox(height: 24),
+              LayoutBuilder(
+                builder: (context, constraints) {
                   return GridView.builder(
-                    gridDelegate:
-                        SilverGried_fixCrossAxis_FixedHEight(
+                    gridDelegate: SilverGried_fixCrossAxis_FixedHEight(
                       crossAxisCount: constraints.maxWidth < 720 ? 1 : 2,
                       crossAxisSpacing: 18,
                       mainAxisSpacing: 18,
@@ -81,16 +85,24 @@ class LanguagePickerScreen extends StatelessWidget {
 
                       if (set) {
                         SharemeRoute.navigateTo(
-                            _globalKey, Screens.languagePicker, RouteDirection.right);
+                          _globalKey,
+                          Screens.home,
+                          RouteDirection.right,
+                        );
                       } else {
                         SharemeRoute.navigateTo(
-                            _globalKey, Screens.languagePicker, RouteDirection.right);
+                          _globalKey,
+                          Screens.intro,
+                          RouteDirection.right,
+                        );
                       }
                     }),
                   );
-                }),
-                const SizedBox(height: 24),
-              ]),
+                },
+              ),
+              const SizedBox(height: 24),
+            ],
+          ),
         ),
       ),
     );

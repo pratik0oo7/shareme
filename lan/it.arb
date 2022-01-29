@@ -27,9 +27,9 @@
     "intro2SendTitle": "INVIA",
     "intro2SendDescription": "Puoi condividere immagini, video, file e testo",
     "intro3ReceiveTitle": "RICEVI",
-    "intro3ReceiveDescription": "Apri il link su qualsiasi browser di un altro dispositivo. Se hai Sharik su entrambi i dispositivi puoi anche usare la funzione destinatario",
+    "intro3ReceiveDescription": "Apri il link su qualsiasi browser di un altro dispositivo. Se hai Share me su entrambi i dispositivi puoi anche usare la funzione destinatario",
     "intro4EverywhereTitle": "OVUNQUE",
-    "intro4EverywhereDescription": "Sharik è disponibile per tutte le principali piattaforme mobili e desktop. Inoltre è gratuito, non contiene pubblicità e il codice sorgente è pubblicato online.\nClicca qui per scoprire di più",
+    "intro4EverywhereDescription": "Share me è disponibile per tutte le principali piattaforme mobili e desktop. Inoltre è gratuito, non contiene pubblicità e il codice sorgente è pubblicato online.\nClicca qui per scoprire di più",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "Versione installata",
     "aboutLatestVersion": "Ultima versione",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "Licenze open source",
     "aboutTrackingPolicy": "Politica di tracciamento",
     "aboutContributors": "Collaboratori",
-    "aboutSharikText": "Sharik è completamente gratuito e il suo codice sorgente è pubblicato su GitHib.\nTutti sono invitati a contribuire :>",
+    "aboutSharemeText": "Share me è completamente gratuito e il suo codice sorgente è pubblicato su GitHib.\nTutti sono invitati a contribuire :>",
     "aboutChangelog": "Registro delle modifiche",
     "aboutLicenses": "Licenze",
     "aboutPrivacyPolicy": "Politica privacy",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Disabilita le transizioni dello schermo",
     "settingsDisableBlur": "Disabilita sfocatura",
     "settingsDisableTracking": "Disabilita monitoraggio",
-    "settingsTrackingDescription": "Sharik incorpora il monitoraggio rispettoso della privacy per scoprire di più sul pubblico dell'app. Stiamo usando i dati analitici per pianificare le nuove funzionalità e dare priorità alle attività.\n\nLe informazioni raccolte non includono l'indirizzo IP o ogni altra informazione identificativa."
+    "settingsTrackingDescription": "Share me incorpora il monitoraggio rispettoso della privacy per scoprire di più sul pubblico dell'app. Stiamo usando i dati analitici per pianificare le nuove funzionalità e dare priorità alle attività.\n\nLe informazioni raccolte non includono l'indirizzo IP o ogni altra informazione identificativa."
 }

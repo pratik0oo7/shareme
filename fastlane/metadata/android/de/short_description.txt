@@ -1,1 +1,0 @@
-Eine Open-Source-Lösung für den Austausch von Dateien in einem lokalen Netzwerk
