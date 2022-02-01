@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously, camel_case_types, prefer_const_constructors, unnecessary_import, unused_import, depend_on_referenced_packages
+// ignore_for_file: use_build_context_synchronously, camel_case_types, prefer_const_constructors, unnecessary_import, unused_import, depend_on_referenced_packages, implementation_imports
 
 import 'dart:ui';
 import 'package:collection/collection.dart';
@@ -7,6 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:provider/src/provider.dart';
 import 'package:shareme/box/dialog.dart';
 import 'package:shareme/box/receivedi.dart';
 import 'package:shareme/box/senddialog.dart';
@@ -17,6 +18,7 @@ import 'package:shareme/navigators%20&%20view/buttons.dart';
 import 'package:shareme/navigators%20&%20view/page_route.dart';
 import 'package:shareme/navigators%20&%20view/sharemelogo.dart';
 import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/themeservice.dart';
 
 class homeScreen extends StatefulWidget {
   @override
@@ -66,161 +68,172 @@ class _homeScreenState extends State<homeScreen> {
 
   @override
   Widget build(BuildContext con) {
-    return RepaintBoundary(
-      key: _globalKey,
+    return SafeArea(
+      top: false,
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SafeArea(
-              bottom: false,
-              left: false,
-              right: false,
-              child: SizedBox(
-                height: 22,
-              ),
-            ),
-            Hero(
-              tag: 'icon',
-              child: Logo(),
-            ),
-            const SizedBox(height: 24),
-            Expanded(
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  // todo review constraints
-                  if (constraints.maxWidth < 720) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 24),
-                      child: Column(
-                        children: [
-                          _sharingButtons(con),
-                          const SizedBox(
-                            height: 24,
-                          ),
-                          Expanded(
-                            child: _sharingHistoryList(con),
-                          ),
-                        ],
-                      ),
-                    );
-                  } else {
-                    return Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(width: 24),
-                        Expanded(child: _sharingButtons(con)),
-                        const SizedBox(width: 24),
-                        Expanded(child: _sharingHistoryList(con)),
-                        const SizedBox(width: 24),
-                      ],
-                    );
-                  }
-                },
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 18),
-              height: 64,
-              decoration: BoxDecoration(
-                color: Colors.deepPurple.shade100,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
+        backgroundColor: Colors.deepOrange.shade50,
+        body: RepaintBoundary(
+          key: _globalKey,
+          child: Scaffold(
+            body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SafeArea(
+                  bottom: false,
+                  left: false,
+                  right: false,
+                  child: SizedBox(
+                    height: 22,
+                  ),
                 ),
-              ),
-              child: Row(
-                children: [
-                  TransparentButton(
-                    SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: Icon(
-                        LucideIcons.languages,
-                        color: Colors.deepPurple.shade700,
-                        size: 20,
-                      ),
-                    ),
-                    () => SharemeRoute.navigateTo(
-                      _globalKey,
-                      Screens.languagePicker,
-                      RouteDirection.left,
-                    ),
-                    TransparentButtonBackground.purpleLight,
+                // Hero(
+                // tag: 'icon',
+                // child: ,
+                // ),
+                const SizedBox(height: 24),
+                Expanded(
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      // todo review constraints
+                      if (constraints.maxWidth < 720) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
+                          child: Column(
+                            children: [
+                              _sharingButtons(con),
+                              const SizedBox(
+                                height: 24,
+                              ),
+                              Expanded(
+                                child: _sharingHistoryList(con),
+                              ),
+                            ],
+                          ),
+                        );
+                      } else {
+                        return Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(width: 24),
+                            Expanded(child: _sharingButtons(con)),
+                            const SizedBox(width: 24),
+                            Expanded(child: _sharingHistoryList(con)),
+                            const SizedBox(width: 24),
+                          ],
+                        );
+                      }
+                    },
                   ),
-                  const SizedBox(width: 2),
-                  TransparentButton(
-                    SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: Icon(
-                        LucideIcons.helpCircle,
-                        color: Colors.deepPurple.shade700,
-                        size: 20,
-                      ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
+                  height: 64,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple.shade100,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(24),
+                      topRight: Radius.circular(24),
                     ),
-                    () => SharemeRoute.navigateTo(
-                      _globalKey,
-                      Screens.intro,
-                      RouteDirection.left,
-                    ),
-                    TransparentButtonBackground.purpleLight,
                   ),
-                  const SizedBox(width: 2),
-                  TransparentButton(
-                    SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: Icon(
-                        LucideIcons.settings,
-                        color: Colors.deepPurple.shade700,
-                        size: 20,
+                  child: Row(
+                    children: [
+                      TransparentButton(
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Icon(
+                            LucideIcons.languages,
+                            color: Colors.deepPurple.shade700,
+                            size: 20,
+                          ),
+                        ),
+                        () => SharemeRoute.navigateTo(
+                          _globalKey,
+                          Screens.languagePicker,
+                          RouteDirection.left,
+                        ),
+                        TransparentButtonBackground.purpleLight,
                       ),
-                    ),
-                    () => SharemeRoute.navigateTo(
-                      _globalKey,
-                      Screens.settings,
-                      RouteDirection.right,
-                    ),
-                    TransparentButtonBackground.purpleLight,
-                  ),
-                  // TransparentButton(
-                  //     SizedBox(
-                  //         height: 20,
-                  //         width: 20,
-                  //         child: Icon(context.watch<ThemeManager>().icon,
-                  //             color: Colors.deepPurple.shade700, size: 20)),
-                  //     () => context.read<ThemeManager>().change(),
-                  //     TransparentButtonBackground.purpleLight),
-                  const Spacer(),
-                  TransparentButton(
-                    Text(
-                      'share Me v$currentVersion →',
-                      style: GoogleFonts.jetBrainsMono(
-                        fontSize: 16,
-                        color: Colors.deepPurple.shade700,
+                      const SizedBox(width: 2),
+                      TransparentButton(
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Icon(
+                            LucideIcons.helpCircle,
+                            color: Colors.deepPurple.shade700,
+                            size: 20,
+                          ),
+                        ),
+                        () => SharemeRoute.navigateTo(
+                          _globalKey,
+                          Screens.intro,
+                          RouteDirection.left,
+                        ),
+                        TransparentButtonBackground.purpleLight,
                       ),
-                    ),
-                    () => SharemeRoute.navigateTo(
-                      _globalKey,
-                      Screens.about,
-                      RouteDirection.right,
-                    ),
-                    TransparentButtonBackground.purpleLight,
+                      const SizedBox(width: 2),
+                      TransparentButton(
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Icon(
+                            LucideIcons.settings,
+                            color: Colors.deepPurple.shade700,
+                            size: 20,
+                          ),
+                        ),
+                        () => SharemeRoute.navigateTo(
+                          _globalKey,
+                          Screens.settings,
+                          RouteDirection.right,
+                        ),
+                        TransparentButtonBackground.purpleLight,
+                      ),
+                      TransparentButton(
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Icon(
+                            LucideIcons.lightbulb,
+                            color: Colors.deepPurple.shade700,
+                            size: 20,
+                          ),
+                        ),
+                        () => context.read<thememanager>().change(),
+                        TransparentButtonBackground.purpleLight,
+                      ),
+                      const Spacer(),
+                      TransparentButton(
+                        Text(
+                          'share Me v$currentVersion →',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 16,
+                            color: Colors.deepPurple.shade700,
+                          ),
+                        ),
+                        () => SharemeRoute.navigateTo(
+                          _globalKey,
+                          Screens.about,
+                          RouteDirection.right,
+                        ),
+                        TransparentButtonBackground.purpleLight,
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                Container(
+                  color: Colors.deepPurple.shade100,
+                  child: SafeArea(
+                    top: false,
+                    right: false,
+                    left: false,
+                    child: Container(),
+                  ),
+                )
+              ],
             ),
-            Container(
-              color: Colors.deepPurple.shade100,
-              child: SafeArea(
-                top: false,
-                right: false,
-                left: false,
-                child: Container(),
-              ),
-            )
-          ],
+          ),
         ),
       ),
     );

@@ -7,9 +7,12 @@ class aboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      child: Text('about'),
+    return Scaffold(
+      backgroundColor: Colors.deepOrange.shade50,
+      body: Container(
+        color: Colors.amber,
+        child: Text('about'),
+      ),
     );
   }
 }

@@ -22,7 +22,7 @@ class _errordisplayScreenState extends State<errordisplayScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple.shade400,
+      backgroundColor: Colors.deepOrange.shade50,
       // ignore: prefer_const_constructors
       body: Center(
         child: Padding(

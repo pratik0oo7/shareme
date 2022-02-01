@@ -42,7 +42,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       Hive.registerAdapter(SharingObjectTypeAdapter());
       Hive.registerAdapter(SharingObjectAdapter());
 
-      await Hive.initFlutter('sharik_storage');
+      await Hive.initFlutter('shareme_storage');
 
       await Hive.openBox<String>('strings');
       await Hive.openBox<shareObject>('history');
@@ -140,27 +140,61 @@ class _LoadingScreenState extends State<LoadingScreen> {
         _globalKey,
         Hive.box<String>('strings').containsKey('language')
             ? Screens.home
-            : Screens.languagePicker,
+            : Screens.home,
+        // : Screens.intro,
         RouteDirection.right,
       );
     } catch (error, trace) {
-      SharemeRoute.navigateTo(_globalKey, Screens.error, RouteDirection.right,
-          '$error \n\n $trace');
+      SharemeRoute.navigateTo(
+        _globalKey,
+        Screens.error,
+        RouteDirection.right,
+        '$error \n\n $trace',
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return RepaintBoundary(
-      key: _globalKey,
+    return SafeArea(
+      top: false,
       child: Scaffold(
-        backgroundColor: Colors.deepPurple.shade400,
-        body: Center(
-          child: SvgPicture.asset(
-            'assets/logo_inverse.svg',
-            height: 60,
-            semanticsLabel: 'Sharik app icon',
-            color: Colors.grey.shade300,
+        backgroundColor: Colors.deepOrange.shade50,
+        body: RepaintBoundary(
+          key: _globalKey,
+          child: Scaffold(
+            backgroundColor: Colors.deepOrange.shade50,
+            // backgroundColor: Color.fromRGBO(245, 235, 226, 2),
+
+            body: Stack(
+              fit: StackFit.expand,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Center(
+                        child: Image.asset(
+                          'assets/logo.png',
+                          height: 60,
+                          color: Color(0xff132137),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/logo_inverse.png',
+                          height: 60,
+                          color: Color(0xff132137),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

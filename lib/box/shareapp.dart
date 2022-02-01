@@ -60,11 +60,10 @@ class _shareAppState extends State<shareApp> {
     if (_search.isEmpty) {
       _apps = apps;
     } else {
-      // selected = null;
-      for (final el in apps) {
-        if (el.packageName.toLowerCase().contains(_search) ||
-            el.appName.toLowerCase().contains(_search)) {
-          _apps.add(el);
+      for (final srch in apps) {
+        if (srch.packageName.toLowerCase().contains(_search) ||
+            srch.appName.toLowerCase().contains(_search)) {
+          _apps.add(srch);
         }
       }
       for (final el in selected) {

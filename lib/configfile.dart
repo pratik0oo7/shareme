@@ -26,7 +26,7 @@ import 'package:shareme/service/localizationservice.dart';
 import 'package:shareme/ui/aboutScreen.dart';
 import 'package:shareme/ui/errorscreen.dart';
 import 'package:shareme/ui/homescreen.dart';
-import 'package:shareme/ui/introduction.dart';
+import 'package:shareme/ui/intro/introduction.dart';
 import 'package:shareme/ui/language.dart';
 import 'package:shareme/ui/load.dart';
 import 'package:shareme/ui/settingScreen.dart';
@@ -103,7 +103,7 @@ List<Language> get languagelist => [
       Language(
         // 200 million
         name: 'indonesian',
-        nameLocal: 'bahasa Indonesia',
+        nameLocal: 'bahasa\nIndonesia',
         locale: const Locale('id'),
         localizations: AppLocalizationsId(),
       ),
@@ -132,7 +132,7 @@ List<Language> get languagelist => [
       Language(
         // 90 million
         name: 'brazilian_portuguese',
-        nameLocal: 'português brasileiro',
+        nameLocal: 'português\nbrasileiro',
         locale: const Locale('br'),
         localizations: AppLocalizationsBr(),
       ),
@@ -232,7 +232,7 @@ Widget screen2widget(Screens s, [Object? args]) {
     case Screens.languagePicker:
       return LanguagePickerScreen();
     case Screens.intro:
-      return introductionScreen();
+      return Introductionanimation();
     case Screens.home:
       return homeScreen();
     case Screens.about:

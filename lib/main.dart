@@ -7,8 +7,11 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:shareme/configfile.dart';
+import 'package:shareme/navigators%20&%20view/theme_app.dart';
 
 import 'package:shareme/service/themeservice.dart';
+import 'package:shareme/ui/homescreen.dart';
+import 'package:shareme/ui/intro/introduction.dart';
 
 import 'service/languageservice.dart';
 import 'service/themeservice.dart';
@@ -110,14 +113,18 @@ class Shareme extends StatelessWidget {
             cursorColor: Colors.grey.shade200.withOpacity(0.9),
             selectionHandleColor: Colors.deepPurple.shade100.withOpacity(0.6),
           ),
-          // Shareme top icon color
-          accentColor: Colors.deepPurple.shade500,
-          // right click select color
-          cardColor: Colors.grey.shade200.withOpacity(0.9),
-          // default button color
-          dividerColor: Colors.deepPurple.shade400,
-          // cardcolor
-          buttonColor: Colors.deepPurple.shade50.withOpacity(0.6),
+          // // Shareme top icon color
+          // accentColor: Colors.deepPurple.shade500,
+          // // right click select color
+          // cardColor: Colors.grey.shade200.withOpacity(0.9),
+          // // default button color
+          // dividerColor: Colors.deepPurple.shade400,
+          // // cardcolor
+          // buttonColor: Colors.deepPurple.shade50.withOpacity(0.6),
+
+          primarySwatch: Colors.blue,
+          textTheme: AppTheme.textTheme,
+          platform: TargetPlatform.iOS,
         ),
         darkTheme: ThemeData(
           brightness: Brightness.dark,
@@ -138,17 +145,20 @@ class Shareme extends StatelessWidget {
             selectionColor: Colors.deepPurple.shade50.withOpacity(0.4),
           ),
 
-          // sharme top icon color
-          accentColor: Colors.deepPurple.shade300,
+          // // sharme top icon color
+          // accentColor: Colors.deepPurple.shade300,
 
-          // right click selection color
-          cardColor: Colors.deepPurple.shade400.withOpacity(0.9),
+          // // right click selection color
+          // cardColor: Colors.deepPurple.shade400.withOpacity(0.9),
 
           // color of the button on the default background
-          dividerColor: Colors.deepPurple.shade50,
+          // dividerColor: Colors.deepPurple.shade50,
 
           // about card color
-          buttonColor: Colors.deepPurple.shade100.withOpacity(0.8),
+          // buttonColor: Colors.deepPurple.shade100.withOpacity(0.8),
+          primarySwatch: Colors.blue,
+          textTheme: AppTheme.textTheme,
+          platform: TargetPlatform.iOS,
         ),
         themeMode: context.watch<thememanager>().theme,
         home: LoadingScreen(),
