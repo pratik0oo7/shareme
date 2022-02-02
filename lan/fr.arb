@@ -27,9 +27,9 @@
     "intro2SendTitle": "ENVOYER",
     "intro2SendDescription": "Vous pouvez envoyer des images, vidéos, fichiers et textes",
     "intro3ReceiveTitle": "RECEVOIR",
-    "intro3ReceiveDescription": "Ouvrir ce lien sur un autre appareil sur n'importe quel navigateur Web. Si vous avez Sharik sur les deux appareils, vous pourrez utiliser la fonction \"recevoir\"",
+    "intro3ReceiveDescription": "Ouvrir ce lien sur un autre appareil sur n'importe quel navigateur Web. Si vous avez Share me sur les deux appareils, vous pourrez utiliser la fonction \"recevoir\"",
     "intro4EverywhereTitle": "PARTOUT",
-    "intro4EverywhereDescription": "Sharik est disponible sur la majorité des appareils mobiles et ordinateurs. De plus, c'est gratuit, sans pubs et son code est disponible en ligne. \nCliquez ici pour en savoir plus",
+    "intro4EverywhereDescription": "Share me est disponible sur la majorité des appareils mobiles et ordinateurs. De plus, c'est gratuit, sans pubs et son code est disponible en ligne. \nCliquez ici pour en savoir plus",
     "@_ABOUT_PAGE": {},
     "aboutInstalledVersion": "Version installée",
     "aboutLatestVersion": "La dernière version",
@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "Licences Open Sources",
     "aboutTrackingPolicy": "Politique de suivi",
     "aboutContributors": "Contributeurs",
-    "aboutSharikText": "Sharik est complètement libre avec son code accesible sur GitHub\nToute contribution est bienvenue :>",
+    "aboutSharemeText": "Share me est complètement libre avec son code accesible sur GitHub\nToute contribution est bienvenue :>",
     "aboutChangelog": "Notes de mises à jour",
     "aboutLicenses": "Licences",
     "aboutPrivacyPolicy": "Politique de confidentialité",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Désactiver les transitions des pages",
     "settingsDisableBlur": "Désactiver le flou",
     "settingsDisableTracking": "Désactiver le traçage",
-    "settingsTrackingDescription": "Sharik intègre un traçage respectant votre vie privée pour savoir plus sur le public de l'application. Nous utilisons les données analytiques pour vous proposer de nouvelles fonctionnalités et prioriser les tâches.\n\nLes informations collectées n'incluent pas votre adresse IP ou autre informations vous identifiant."
+    "settingsTrackingDescription": "Share me intègre un traçage respectant votre vie privée pour savoir plus sur le public de l'application. Nous utilisons les données analytiques pour vous proposer de nouvelles fonctionnalités et prioriser les tâches.\n\nLes informations collectées n'incluent pas votre adresse IP ou autre informations vous identifiant."
 }

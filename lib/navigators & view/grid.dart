@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, camel_case_types
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';

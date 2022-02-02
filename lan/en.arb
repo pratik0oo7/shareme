@@ -28,9 +28,9 @@
   "intro2SendTitle": "SEND",
   "intro2SendDescription": "You can share images, videos, files, and text",
   "intro3ReceiveTitle": "RECEIVE",
-  "intro3ReceiveDescription": "Open the link on another device in any web browser. If you have Sharik of both devices, you can also use the receiver function",
+  "intro3ReceiveDescription": "Open the link on another device in any web browser. If you have Share me of both devices, you can also use the receiver function",
   "intro4EverywhereTitle": "EVERYWHERE",
-  "intro4EverywhereDescription": "Sharik is available for all major mobile and desktop platforms. Also, it is free, it has no ads, and its code is published online.\nClick here to learn more",
+  "intro4EverywhereDescription": "Share me is available for all major mobile and desktop platforms. Also, it is free, it has no ads, and its code is published online.\nClick here to learn more",
 
   "@_ABOUT_PAGE": {},
   "aboutInstalledVersion": "Installed version",
@@ -42,7 +42,7 @@
   "aboutOpenSourceLicenses": "Open source licenses",
   "aboutTrackingPolicy": "Tracking policy",
   "aboutContributors": "Contributors",
-  "aboutSharikText": "Sharik is completely free with its code published on GitHub.\nEveryone is welcomed to contribute :>",
+  "aboutSharemeText": "Share me is completely free with its code published on GitHub.\nEveryone is welcomed to contribute :>",
   "aboutChangelog": "Changelog",
   "aboutLicenses": "Licenses",
   "aboutPrivacyPolicy": "Privacy policy",
@@ -78,5 +78,5 @@
   "settingsDisableScreenTransitions": "Disable screen transitions",
   "settingsDisableBlur": "Disable blur",
   "settingsDisableTracking": "Disable tracking",
-  "settingsTrackingDescription": "Sharik incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
+  "settingsTrackingDescription": "Share me incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
 }

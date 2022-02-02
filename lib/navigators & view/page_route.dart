@@ -1,13 +1,15 @@
-// ignore_for_file: unnecessary_import, unused_import
+// ignore_for_file: unnecessary_import, unused_import, always_use_package_imports, require_trailing_commas
 
+import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:shareme/configfile.dart';
 import 'package:shareme/ui/language.dart';
 import 'package:widget_to_image/widget_to_image.dart';
+
 import '../helper.dart';
 import '../main.dart';
 
@@ -39,10 +41,12 @@ class SharemeRoute extends PageRouteBuilder {
                   end: direction == RouteDirection.right
                       ? const Offset(-1.0, 0.0)
                       : const Offset(1.0, 0.0),
-                ).animate(CurvedAnimation(
-                  parent: animation,
-                  curve: Curves.fastOutSlowIn,
-                )),
+                ).animate(
+                  CurvedAnimation(
+                    parent: animation,
+                    curve: Curves.fastOutSlowIn,
+                  ),
+                ),
                 child: exitPageImage,
               ),
               SlideTransition(
@@ -53,10 +57,12 @@ class SharemeRoute extends PageRouteBuilder {
                   end: direction == RouteDirection.right
                       ? Offset.zero
                       : Offset.zero,
-                ).animate(CurvedAnimation(
-                  parent: animation,
-                  curve: Curves.fastOutSlowIn,
-                )),
+                ).animate(
+                  CurvedAnimation(
+                    parent: animation,
+                    curve: Curves.fastOutSlowIn,
+                  ),
+                ),
                 child: child,
               )
             ],
@@ -87,11 +93,13 @@ class SharemeRoute extends PageRouteBuilder {
         ),
       );
     } else {
-      navigatorKey.currentState!.pushReplacement(SharemeRoute(
-        exitPageImage: Image.memory(data),
-        enterPage: screen2widget(screen, args),
-        direction: direction,
-      ));
+      navigatorKey.currentState!.pushReplacement(
+        SharemeRoute(
+          exitPageImage: Image.memory(data),
+          enterPage: screen2widget(screen, args),
+          direction: direction,
+        ),
+      );
     }
   }
 }

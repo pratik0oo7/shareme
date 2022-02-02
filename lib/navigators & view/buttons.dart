@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, always_use_package_imports, require_trailing_commas, avoid_redundant_argument_values
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,19 +29,21 @@ class PrimaryButton extends StatelessWidget {
     this.roundedRadius = 12,
   });
 
-  // todo reevaluate hover and splash colors
+//   // todo reevaluate hover and splash colors
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height.toDouble(),
       child: Material(
         borderRadius: BorderRadius.circular(roundedRadius.toDouble()),
-        color: Colors.deepPurple.shade400,
+        shadowColor: Colors.amber,
+        color: Colors.deepPurple, // language button color
+        borderOnForeground: true,
         child: InkWell(
-          splashColor: Colors.deepPurple.shade300.withOpacity(0.4),
-          hoverColor: Colors.deepPurple.shade200.withOpacity(0.12),
-          highlightColor: Colors.transparent,
-          focusColor: Colors.white.withOpacity(0.2),
+          splashColor: Colors.blue.shade300.withOpacity(0.4),
+          hoverColor: Colors.red.shade200.withOpacity(0.12),
+          highlightColor: Colors.amber,
+          focusColor: Colors.brown.withOpacity(1),
           borderRadius: BorderRadius.circular(roundedRadius.toDouble()),
           onTap: onClick,
           child: secondaryIcon != null
@@ -51,14 +53,17 @@ class PrimaryButton extends StatelessWidget {
                       alignment: const Alignment(0.9, 0.0),
                       child: secondaryIcon,
                     ),
+                    // Language text property
                     Center(
                       child: Text(
                         text,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.getFont(
                           font ?? context.l.fontAndika,
-                          color: Colors.grey.shade100,
+                          color: Colors.white70, //language text color
                           fontSize: fontSize.toDouble(),
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2,
                         ),
                       ),
                     ),
@@ -72,7 +77,7 @@ class PrimaryButton extends StatelessWidget {
                           child: CircularProgressIndicator(
                             strokeWidth: 2.4,
                             valueColor: AlwaysStoppedAnimation<Color?>(
-                              Colors.grey.shade100,
+                              Colors.deepOrange.shade100,
                             ),
                           ),
                         )
@@ -81,7 +86,7 @@ class PrimaryButton extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: GoogleFonts.getFont(
                             font ?? context.l.fontAndika,
-                            color: Colors.grey.shade100,
+                            color: Colors.green.shade100,
                             fontSize: fontSize.toDouble(),
                           ),
                         ),
@@ -101,14 +106,14 @@ class DialogTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
+      color: Colors.indigo,
       borderRadius: BorderRadius.circular(6),
       child: InkWell(
         borderRadius: BorderRadius.circular(6),
         splashColor: context.t.dividerColor.withOpacity(0.08),
         hoverColor: context.t.dividerColor.withOpacity(0.04),
         highlightColor: Colors.transparent,
-        focusColor: Colors.white.withOpacity(0.2),
+        focusColor: Colors.pink.withOpacity(0.2),
         onTap: onClick,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 10),
@@ -148,12 +153,12 @@ class TransparentButton extends StatelessWidget {
         hoverColor = context.t.dividerColor.withOpacity(0.04);
         break;
       case TransparentButtonBackground.purpleLight:
-        splashColor = Colors.deepPurple.shade300.withOpacity(0.16);
-        hoverColor = Colors.deepPurple.shade200.withOpacity(0.6);
+        splashColor = Colors.teal.shade300.withOpacity(0.16);
+        hoverColor = Colors.yellow.shade200.withOpacity(0.6);
         break;
       case TransparentButtonBackground.purpleDark:
-        splashColor = Colors.deepPurple.shade200.withOpacity(0.2);
-        hoverColor = Colors.deepPurple.shade200.withOpacity(0.4);
+        splashColor = Colors.teal.shade200.withOpacity(0.2);
+        hoverColor = Colors.lime.shade200.withOpacity(0.4);
         break;
     }
 
@@ -161,18 +166,18 @@ class TransparentButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         side: BorderSide(
           color: border
-              ? Colors.deepPurple.shade100.withOpacity(0.16)
-              : Colors.transparent,
+              ? Colors.deepOrange.shade100.withOpacity(0.16)
+              : Colors.yellowAccent,
         ),
         borderRadius: BorderRadius.circular(8),
       ),
-      color: Colors.transparent,
+      color: Colors.blueAccent,
       child: InkWell(
         borderRadius: BorderRadius.circular(8),
         splashColor: splashColor,
         hoverColor: hoverColor,
-        highlightColor: Colors.transparent,
-        focusColor: Colors.white.withOpacity(0.2),
+        highlightColor: Colors.blueGrey,
+        focusColor: Colors.cyanAccent.withOpacity(0.2),
         onTap: onClick,
         child: Container(
           margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
@@ -193,12 +198,12 @@ class ListButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(12),
-      color: Colors.deepPurple.shade300,
+      color: Colors.deepOrangeAccent,
       child: InkWell(
-        splashColor: Colors.deepPurple.shade100.withOpacity(0.2),
-        hoverColor: Colors.deepPurple.shade100.withOpacity(0.4),
-        highlightColor: Colors.transparent,
-        focusColor: Colors.white.withOpacity(0.2),
+        splashColor: Colors.greenAccent.shade100.withOpacity(0.2),
+        hoverColor: Colors.tealAccent.shade100.withOpacity(0.4),
+        highlightColor: Colors.redAccent,
+        focusColor: Colors.white10.withOpacity(0.2),
         borderRadius: BorderRadius.circular(12),
         onTap: onPressed,
         child: Padding(

@@ -1,1 +1,0 @@
-An open-source, cross-platform solution for sharing files within a local network

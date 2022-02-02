@@ -40,7 +40,7 @@
     "aboutOpenSourceLicenses": "مجوزهای متن باز",
     "aboutTrackingPolicy": "سیاست جمع آوری اطلاعات",
     "aboutContributors": "مشارکت کنندگان",
-    "aboutSharikText": "شریک کاملا رایگان و کد آن بر روی گیت هاب منتشر شده است.\nهمه میتوانند در این پروژه مشارکت کنند :>",
+    "aboutSharemeText": "شریک کاملا رایگان و کد آن بر روی گیت هاب منتشر شده است.\nهمه میتوانند در این پروژه مشارکت کنند :>",
     "aboutChangelog": "لیست تغییرات",
     "aboutLicenses": "Tajawal",
     "aboutPrivacyPolicy": "سیاست حفظ حریم خصوصی",
@@ -70,5 +70,5 @@
     "settingsDisableScreenTransitions": "Disable screen transitions",
     "settingsDisableBlur": "Disable blur",
     "settingsDisableTracking": "Disable tracking",
-    "settingsTrackingDescription": "Sharik incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
+    "settingsTrackingDescription": "Share me incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information."
 }
