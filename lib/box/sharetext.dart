@@ -21,9 +21,12 @@ class _shareTextState extends State<shareText> {
       elevation: 0,
       insetPadding: const EdgeInsets.all(24),
       title: Text(
-        context.l.homeSelectTextTypeSomeText,
-        style: GoogleFonts.getFont(context.l.fontComfortaa,
-            fontWeight: FontWeight.w700,),
+        'Type some text',
+        // context.l.homeSelectTextTypeSomeText,
+        style: GoogleFonts.comfortaa(
+          // context.l.fontComfortaa,
+          fontWeight: FontWeight.w700,
+        ),
       ),
       scrollable: true,
       content: TextField(
@@ -38,13 +41,15 @@ class _shareTextState extends State<shareText> {
       ),
       actions: [
         DialogTextButton(
-          context.l.generalClose,
+          'Close',
+          // context.l.generalClose,
           () {
             Navigator.of(context).pop();
           },
         ),
         DialogTextButton(
-          context.l.generalSend,
+          'Send',
+          // context.l.generalSend,
           text.isEmpty
               ? null
               : () {

@@ -138,19 +138,19 @@ class _homeScreenState extends State<homeScreen> {
                   ),
                   child: Row(
                     children: [
-                      IconButton(
-                        icon: Icon(
-                          LucideIcons.languages,
-                          size: 20,
-                        ),
-                        onPressed: () {
-                          SharemeRoute.navigateTo(
-                            _globalKey,
-                            Screens.languagePicker,
-                            RouteDirection.left,
-                          );
-                        },
-                      ),
+                      // IconButton(
+                      //   icon: Icon(
+                      //     LucideIcons.languages,
+                      //     size: 20,
+                      //   ),
+                      //   onPressed: () {
+                      //     SharemeRoute.navigateTo(
+                      //       _globalKey,
+                      //       Screens.languagePicker,
+                      //       RouteDirection.left,
+                      //     );
+                      //   },
+                      // ),
                       const SizedBox(width: 2),
                       IconButton(
                         icon: Icon(
@@ -235,8 +235,8 @@ class _homeScreenState extends State<homeScreen> {
         child: Row(
           children: [
             Text(
-              con.l.homeHistory,
-              style: GoogleFonts.getFont(con.l.fontComfortaa, fontSize: 24),
+              'History',
+              style: TextStyle(fontSize: 24),
             ),
             const Spacer(),
             TransparentButton(
@@ -311,8 +311,7 @@ class _homeScreenState extends State<homeScreen> {
                 scrollDirection: Axis.horizontal,
                 child: Text(
                   shr.name,
-                  style: GoogleFonts.getFont(
-                    con.l.fontAndika,
+                  style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),

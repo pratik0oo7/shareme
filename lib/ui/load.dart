@@ -14,16 +14,17 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
+import 'package:widget_to_image/widget_to_image.dart';
+
 import 'package:shareme/box/dialog.dart';
-import 'package:shareme/navigators%20&%20view/navigate.dart';
 import 'package:shareme/configfile.dart';
 import 'package:shareme/helper.dart';
+import 'package:shareme/navigators%20&%20view/navigate.dart';
 import 'package:shareme/navigators%20&%20view/page_route.dart';
 import 'package:shareme/service/languageservice.dart';
 import 'package:shareme/service/localizationservice.dart';
 import 'package:shareme/service/themeservice.dart';
 import 'package:shareme/ui/main_screen.dart';
-import 'package:widget_to_image/widget_to_image.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -78,7 +79,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       await Hive.openBox<String>('strings');
       await Hive.openBox<shareObject>('history');
 
-      context.read<Languagemanager>().init();
+      // context.read<Languagemanager>().init();
       context.read<thememanager>().init();
 
       _initAnalytics(context);

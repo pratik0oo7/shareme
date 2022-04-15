@@ -23,8 +23,9 @@ class picknetworkdialog extends StatelessWidget {
       insetPadding: const EdgeInsets.all(24),
       scrollable: true,
       title: Text(
-        context.l.sharingSelectNetworkInterface,
-        style: GoogleFonts.getFont(context.l.fontComfortaa,
+        'Select network interface',
+        // context.l.sharingSelectNetworkInterface,
+        style: TextStyle(
             fontWeight: FontWeight.w700,),
       ),
       // todo probably redundant
@@ -53,14 +54,14 @@ class picknetworkdialog extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Text(
                         el.name,
-                        style: GoogleFonts.getFont('Andika',
+                        style: GoogleFonts.andika(
                             color: context.t.textTheme.bodyText1!.color,),
                       ),),
                   subtitle: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Text(
                       el.addresses.first.address,
-                      style: GoogleFonts.getFont('Andika',
+                      style: GoogleFonts.andika(
                           color: context.t.textTheme.caption!.color,),
                     ),
                   ),
@@ -74,7 +75,7 @@ class picknetworkdialog extends StatelessWidget {
         ),
       ),
       actions: [
-        DialogTextButton(context.l.generalClose, () {
+        DialogTextButton('Close', () {
           Navigator.of(context).pop();
         }),
       ],

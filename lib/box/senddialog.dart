@@ -24,9 +24,9 @@ class Send extends StatelessWidget {
       elevation: 0,
       insetPadding: const EdgeInsets.all(24),
       title: Text(
-        context.l.homeSend,
-        style: GoogleFonts.getFont(
-          context.l.fontComfortaa,
+        'Send',
+        style: GoogleFonts.comfortaa(
+          // context.l.fontComfortaa,
           fontWeight: FontWeight.w700,
         ),
       ),
@@ -47,9 +47,9 @@ class Send extends StatelessWidget {
                     width: 8,
                   ),
                   Text(
-                    context.l.homeFiles,
-                    style: GoogleFonts.getFont(
-                      context.l.fontAndika,
+                    'Files',
+                    style: GoogleFonts.andika(
+                      // context.l.fontAndika,
                       fontSize: 18,
                     ),
                   ),
@@ -107,9 +107,11 @@ class Send extends StatelessWidget {
                     width: 8,
                   ),
                   Text(
-                    context.l.homeSelectText,
-                    style:
-                        GoogleFonts.getFont(context.l.fontAndika, fontSize: 18),
+                    'Text',
+                    style: GoogleFonts.andika(
+                      // context.l.fontAndika,
+                      fontSize: 18,
+                    ),
                   ),
                 ],
               ),
@@ -136,9 +138,9 @@ class Send extends StatelessWidget {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      context.l.homeSelectApp,
-                      style: GoogleFonts.getFont(
-                        context.l.fontAndika,
+                      'App',
+                      style: GoogleFonts.andika(
+                        // context.l.fontAndika,
                         fontSize: 18,
                       ),
                     ),
@@ -166,7 +168,7 @@ class Send extends StatelessWidget {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      context.l.homeSelectGallery,
+                      'Gallery',
                       style: GoogleFonts.andika(fontSize: 18),
                     ),
                   ],
@@ -176,11 +178,16 @@ class Send extends StatelessWidget {
                       .pickFiles(type: FileType.media, allowMultiple: true);
 
                   if (f != null) {
-                    Navigator.of(context).pop(shareObject(
+                    Navigator.of(context).pop(
+                      shareObject(
                         data: f.paths.join(multipleFilesDelimiter),
                         type: SharingObjectType.file,
-                        name: shareObject.getshareName(SharingObjectType.file,
-                            f.paths.join(multipleFilesDelimiter),),),);
+                        name: shareObject.getshareName(
+                          SharingObjectType.file,
+                          f.paths.join(multipleFilesDelimiter),
+                        ),
+                      ),
+                    );
                   }
                 },
                 TransparentButtonBackground.def,
@@ -190,7 +197,7 @@ class Send extends StatelessWidget {
         ],
       ),
       actions: [
-        DialogTextButton(context.l.generalClose, () {
+        DialogTextButton('Close', () {
           Navigator.of(context).pop();
         }),
         const SizedBox(width: 4),

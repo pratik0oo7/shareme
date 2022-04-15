@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -25,7 +25,6 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => Languagemanager()),
         ChangeNotifierProvider(create: (_) => thememanager()),
         ChangeNotifierProvider(create: (_) => CoreProvider()),
         ChangeNotifierProvider(create: (_) => categoryprovider()),
@@ -94,14 +93,14 @@ class Shareme extends StatelessWidget {
           );
         },
         // devicepreview.appbuilder
-        locale: context.watch<Languagemanager>().language.locale,
+        // locale: context.watch<Languagemanager>().language.locale,
         localizationsDelegates: const [
-          AppLocalizations.delegate,
+          // AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        supportedLocales: languagelist.map((e) => e.locale),
+        // supportedLocales: languagelist.map((e) => e.locale),
         title: 'Share And Connect',
         theme: ThemeData(
           brightness: Brightness.light,

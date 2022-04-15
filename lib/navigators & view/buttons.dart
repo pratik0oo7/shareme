@@ -58,8 +58,8 @@ class PrimaryButton extends StatelessWidget {
                       child: Text(
                         text,
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.getFont(
-                          font ?? context.l.fontAndika,
+                        style: GoogleFonts.andika(
+                          // font ?? context.l.fontAndika,
                           color: Colors.white70, //language text color
                           fontSize: fontSize.toDouble(),
                           fontWeight: FontWeight.bold,
@@ -84,8 +84,8 @@ class PrimaryButton extends StatelessWidget {
                       : Text(
                           text,
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.getFont(
-                            font ?? context.l.fontAndika,
+                          style: GoogleFonts.andika(
+                            // font ?? 'Andika',
                             color: Colors.green.shade100,
                             fontSize: fontSize.toDouble(),
                           ),
@@ -119,8 +119,8 @@ class DialogTextButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 10),
           child: Text(
             text,
-            style: GoogleFonts.getFont(
-              context.l.fontAndika,
+            style: GoogleFonts.andika(
+              // context.l.fontAndika,
               fontSize: 15,
               color: onClick != null
                   ? context.t.dividerColor

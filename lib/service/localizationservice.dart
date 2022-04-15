@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-const String multipleFilesDelimiter = '|sharik|';
+const String multipleFilesDelimiter = '|share me|';
 
 @HiveType(typeId: 1)
 class shareObject {

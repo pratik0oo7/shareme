@@ -46,7 +46,6 @@ dependencies:
   wakelock: ^0.5.6
 
   widget_to_image:
-    # git: https://github.com/marchellodev/widget_to_image.git
 
 
   # UTILS

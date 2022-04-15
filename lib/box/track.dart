@@ -1,6 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages, unused_import
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -44,16 +44,17 @@ class _TrackboxState extends State<Trackbox> {
       elevation: 0,
       insetPadding: const EdgeInsets.all(24),
       title: Text(
-        context.l.settingsTracking,
-        style: GoogleFonts.getFont(
-          context.l.fontComfortaa,
+        'Tracking',
+        // context.l.settingsTracking,
+        style: GoogleFonts.comfortaa(
+          // context.l.fontComfortaa,
           fontWeight: FontWeight.w700,
           fontSize: 15,
         ),
       ),
       actions: [
         DialogTextButton(
-          '${context.l.settingsDisableTracking}${_timer > 0 ? '($_timer)' : ''}',
+          '${'Disable tracking'}${_timer > 0 ? '($_timer)' : ''}',
           _timer > 0
               ? null
               : () {
@@ -62,7 +63,8 @@ class _TrackboxState extends State<Trackbox> {
                 },
         ),
         DialogTextButton(
-          context.l.settingsTrackingAllow,
+          'Allow',
+          // context.l.settingsTrackingAllow,
           () {
             Hive.box<String>('strings').put('tracking', '1');
             Navigator.of(context).pop();
@@ -71,7 +73,9 @@ class _TrackboxState extends State<Trackbox> {
       ],
       scrollable: true,
       content: MarkdownBody(
-        data: context.l.settingsTrackingDescription,
+        data:
+            'Sync and Share incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information.',
+        // data: context.l.settingsTrackingDescription,
         styleSheet: MarkdownStyleSheet(
           p: GoogleFonts.jetBrainsMono(fontSize: 15),
         ),

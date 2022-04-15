@@ -53,9 +53,9 @@ class _receiveState extends State<receive> {
           elevation: 0,
           insetPadding: const EdgeInsets.all(24),
           title: Text(
-            context.l.sharingReceiver,
-            style: GoogleFonts.getFont(
-              context.l.fontComfortaa,
+            "Receiver",
+            style: GoogleFonts.comfortaa(
+              // context.l.fontComfortaa,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -79,8 +79,8 @@ class _receiveState extends State<receive> {
                         Center(
                           child: Text(
                             receiverService.loop.toString(),
-                            style: GoogleFonts.getFont(
-                              context.l.fontComfortaa,
+                            style: GoogleFonts.comfortaa(
+                              // context.l.fontComfortaa,
                               fontSize: 13,
                             ),
                           ),
@@ -145,7 +145,7 @@ class _receiveState extends State<receive> {
                 ),
           actions: [
             DialogTextButton(
-              context.l.sharingNetworkInterfaces,
+              'Network interfaces',
               receiverService.loaded
                   ? () async {
                       final s = receiverService.ipService.selectedInterface;
@@ -159,7 +159,7 @@ class _receiveState extends State<receive> {
                     }
                   : null,
             ),
-            DialogTextButton(context.l.generalClose, () {
+            DialogTextButton('Close', () {
               Navigator.of(context).pop();
             }),
             const SizedBox(width: 4),

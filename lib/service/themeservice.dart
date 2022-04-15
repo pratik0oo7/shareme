@@ -39,11 +39,11 @@ class thememanager extends ChangeNotifier {
   String name(BuildContext context) {
     switch (theme) {
       case ThemeMode.system:
-        return context.l.settingsThemeSystem;
+        return 'System';
       case ThemeMode.light:
-        return context.l.settingsThemeLight;
+        return 'Light';
       case ThemeMode.dark:
-        return context.l.settingsThemeDark;
+        return 'Dark';
     }
   }
 

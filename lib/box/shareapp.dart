@@ -91,7 +91,8 @@ class _shareAppState extends State<shareApp> {
                 ),
                 contentPadding: EdgeInsets.zero,
                 title: Text(
-                  context.l.selectAppHideSystem,
+                  'Hide system apps',
+                  // context.l.selectAppHideSystem,
                   style: GoogleFonts.getFont('Andika'),
                 ),
                 value: _hideSystem,
@@ -109,7 +110,8 @@ class _shareAppState extends State<shareApp> {
                 ),
                 contentPadding: EdgeInsets.zero,
                 title: Text(
-                  context.l.selectAppHideNonLaunch,
+                  'Hide non-launchable apps',
+                  // context.l.selectAppHideNonLaunch,
                   style: GoogleFonts.getFont('Andika'),
                 ),
                 value: _hideLaunchLess,
@@ -123,8 +125,10 @@ class _shareAppState extends State<shareApp> {
               TextField(
                 onChanged: (value) =>
                     setState(() => _search = value.toLowerCase()),
-                decoration:
-                    InputDecoration(hintText: context.l.selectAppSearch),
+                decoration: InputDecoration(
+                  hintText: 'Search',
+                  // hintText: context.l.selectAppSearch,
+                ),
               ),
               const SizedBox(height: 14),
               for (final app in _apps)
@@ -188,11 +192,14 @@ class _shareAppState extends State<shareApp> {
         ),
       ),
       actions: [
-        DialogTextButton(context.l.generalClose, () {
+        DialogTextButton('Close',
+            // context.l.generalClose,
+            () {
           Navigator.of(context).pop();
         }),
         DialogTextButton(
-          context.l.generalSend,
+          'Send',
+          // context.l.generalSend,
           selected.isEmpty
               ? null
               : () {

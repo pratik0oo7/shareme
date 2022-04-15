@@ -112,7 +112,7 @@ class CenterNextButton extends StatelessWidget {
                         },
                         child: _signUpMoveAnimation.value > 0.7
                             ? InkWell(
-                                key: const ValueKey('Sign Up button'),
+                                key: const ValueKey("Let's Start button"),
                                 onTap: () {
                                   SharemeRoute.navigateTo(
                                     _globalkey,
@@ -128,7 +128,7 @@ class CenterNextButton extends StatelessWidget {
                                     const Flexible(
                                       child: Center(
                                         child: Text(
-                                          'Sign up',
+                                          "Let's share ",
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 18,
