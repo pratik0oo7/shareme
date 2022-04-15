@@ -83,7 +83,7 @@ class contactslide extends StatelessWidget {
                             const BoxConstraints(maxWidth: 350, maxHeight: 350),
                         // ignore: deprecated_member_use
                         child: FlatButton(
-                          padding: EdgeInsets.only(left: 8.0),
+                          padding: const EdgeInsets.only(left: 8.0),
                           onPressed: () {
                             SharemeRoute.navigateTo(
                               _globalkey,
@@ -101,7 +101,7 @@ class contactslide extends StatelessWidget {
                     SlideTransition(
                       position: _welcomeFirstHalfAnimation,
                       child: const Text(
-                        "Welcome",
+                        'Welcome',
                         style: TextStyle(
                           fontSize: 25.0,
                           fontWeight: FontWeight.bold,
@@ -118,7 +118,7 @@ class contactslide extends StatelessWidget {
                       ),
                       // ignore: prefer_const_constructors
                       child: Text(
-                        "Share & Sync",
+                        'Share & Sync',
                         textAlign: TextAlign.center,
                       ),
                     ),

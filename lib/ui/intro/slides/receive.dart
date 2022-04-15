@@ -1,3 +1,5 @@
+// ignore_for_file: use_named_constants, camel_case_types
+
 import 'package:flutter/material.dart';
 
 class receiveslide extends StatelessWidget {
@@ -94,7 +96,7 @@ class receiveslide extends StatelessWidget {
               // ignore: prefer_const_constructors
               Center(
                 child: const Text(
-                  "Speedy ",
+                  'Speedy ',
                   // ignore: unnecessary_const
                   style: const TextStyle(
                     fontSize: 30.0,
@@ -107,7 +109,7 @@ class receiveslide extends StatelessWidget {
                 child: SlideTransition(
                   position: _moodSecondHalfAnimation,
                   child: const Padding(
-                    padding: const EdgeInsets.only(
+                    padding: EdgeInsets.only(
                       left: 64,
                       right: 64,
                       top: 16,
@@ -115,7 +117,7 @@ class receiveslide extends StatelessWidget {
                     ),
                     // ignore: unnecessary_const
                     child: const Text(
-                      "Faster than Bluetooth\nEasier than AirDrop\nNo need for NFC",
+                      'Faster than Bluetooth\nEasier than AirDrop\nNo need for NFC',
                       textAlign: TextAlign.center,
                     ),
                   ),

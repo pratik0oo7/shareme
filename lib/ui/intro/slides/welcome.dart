@@ -1,3 +1,5 @@
+// ignore_for_file: use_named_constants, camel_case_types, require_trailing_commas, avoid_redundant_argument_values
+
 import 'package:flutter/material.dart';
 
 class welcomeslide extends StatefulWidget {
@@ -5,13 +7,7 @@ class welcomeslide extends StatefulWidget {
 
   const welcomeslide(
       {Key? key,
-      required this.animationController,
-      TextStyle? styleTitle,
-      TextStyle? styleDescription,
-      String? title,
-      String? description,
-      String? pathImage,
-      Color? backgroundColor})
+      required this.animationController})
       : super(key: key);
 
   @override
@@ -30,7 +26,7 @@ class _welcomeslideState extends State<welcomeslide> {
         0.2,
         curve: Curves.fastOutSlowIn,
       ),
-    ));
+    ),);
     return SlideTransition(
       position: _introductionanimation,
       child: SingleChildScrollView(
@@ -45,19 +41,19 @@ class _welcomeslideState extends State<welcomeslide> {
                 ),
               ),
               const Padding(
-                padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
                 // ignore: unnecessary_const
                 child: const Text(
-                  "Welcome ",
+                  'Welcome ',
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
               ),
               const Padding(
-                padding: const EdgeInsets.only(top: 0.0, bottom: 8.0),
+                padding: EdgeInsets.only(top: 0.0, bottom: 8.0),
 
                 // ignore: unnecessary_const
                 child: const Text(
-                  "Sync & Share",
+                  'Sync & Share',
                   // ignore: unnecessary_const
                   style: const TextStyle(
                     fontSize: 30.0,
@@ -71,7 +67,7 @@ class _welcomeslideState extends State<welcomeslide> {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).padding.bottom + 16),
+                    bottom: MediaQuery.of(context).padding.bottom + 16,),
                 child: InkWell(
                   onTap: () {
                     widget.animationController.animateTo(0.2);
@@ -90,7 +86,7 @@ class _welcomeslideState extends State<welcomeslide> {
                     ),
                     child: const Text(
                       "Let's go",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,
                       ),

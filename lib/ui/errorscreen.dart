@@ -29,7 +29,7 @@ class _errordisplayScreenState extends State<errordisplayScreen> {
           padding: const EdgeInsets.all(12.0),
           // ignore: prefer_const_constructors
           child: Text(
-            "Unfortunately, an error has occurred.\n\nError information was copied to the clipboard, please file an issue on GitHub:\nhttps://github.com/pratik0oo7/shareme\n\n\nRestarting or reinstalling the app might help solve the problem.\n\nThanks for using Share Me!!!! :=>",
+            'Unfortunately, an error has occurred.\n\nError information was copied to the clipboard, please file an issue on GitHub:\nhttps://github.com/pratik0oo7/shareme\n\n\nRestarting or reinstalling the app might help solve the problem.\n\nThanks for using Share Me!!!! :=>',
             textAlign: TextAlign.center,
             style: GoogleFonts.jetBrainsMono(
               fontSize: 15,

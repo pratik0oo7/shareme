@@ -1,3 +1,5 @@
+// ignore_for_file: require_trailing_commas, use_named_constants, avoid_redundant_argument_values, sort_child_properties_last
+
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
@@ -114,8 +116,8 @@ class CenterNextButton extends StatelessWidget {
                                 onTap: () {
                                   SharemeRoute.navigateTo(
                                     _globalkey,
-                                    Screens.home,
-                                    RouteDirection.left,
+                                    Screens.main,
+                                    RouteDirection.right,
                                   );
                                 },
                                 child: Row(
@@ -142,8 +144,8 @@ class CenterNextButton extends StatelessWidget {
                                 key: const ValueKey('next button'),
                                 onTap: onNextClick,
                                 child: const Padding(
-                                  padding: const EdgeInsets.all(16.0),
-                                  child: const Icon(
+                                  padding: EdgeInsets.all(16.0),
+                                  child: Icon(
                                     LucideIcons.arrowRight,
                                     size: 25,
                                     color: Colors.white,
@@ -161,8 +163,8 @@ class CenterNextButton extends StatelessWidget {
                   position: _loginTextMoveAnimation,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         '',
                         style: TextStyle(
                           color: Colors.grey,
@@ -170,10 +172,10 @@ class CenterNextButton extends StatelessWidget {
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      const Text(
+                      Text(
                         '',
-                        style: const TextStyle(
-                          color: const Color(0xff132137),
+                        style: TextStyle(
+                          color: Color(0xff132137),
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

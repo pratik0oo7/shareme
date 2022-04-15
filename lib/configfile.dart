@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages, implementation_imports, prefer_const_constructors
+// ignore_for_file: depend_on_referenced_packages, implementation_imports, prefer_const_constructors, avoid_classes_with_only_static_members, avoid_dynamic_calls
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -29,6 +29,7 @@ import 'package:shareme/ui/homescreen.dart';
 import 'package:shareme/ui/intro/introduction.dart';
 import 'package:shareme/ui/language.dart';
 import 'package:shareme/ui/load.dart';
+import 'package:shareme/ui/main_screen.dart';
 import 'package:shareme/ui/settingScreen.dart';
 import 'package:shareme/ui/sharefileScreen.dart';
 
@@ -223,6 +224,7 @@ enum Screens {
   sharing,
   error,
   settings,
+  main,
 }
 
 Widget screen2widget(Screens s, [Object? args]) {
@@ -243,5 +245,81 @@ Widget screen2widget(Screens s, [Object? args]) {
       return settingScreen();
     case Screens.error:
       return errordisplayScreen(args! as String);
+    case Screens.main:
+      return MainScreen();
   }
+}
+
+class CustomDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Stack(
+      children: [
+        Align(
+          alignment: Alignment.centerRight,
+          child: Container(
+            height: 1,
+            color: Theme.of(context).dividerColor,
+            width: size.width - 70,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Constants {
+  static List<T> map<T>(List list, Function handler) {
+    List<T> result = [];
+    for (var i = 0; i < list.length; i++) {
+      result.add(handler(i, list[i]) as T);
+    }
+
+    return result;
+  }
+
+  static List categories = [
+    {
+      'title': 'Downloads',
+      'icon': Icons.download,
+      'path': '',
+      'color': Colors.purple
+    },
+    {'title': 'Images', 'icon': Icons.image, 'path': '', 'color': Colors.blue},
+    {
+      'title': 'Videos',
+      'icon': Icons.ondemand_video,
+      'path': '',
+      'color': Colors.red
+    },
+    {
+      'title': 'Audio',
+      'icon': Icons.headphones,
+      'path': '',
+      'color': Colors.teal
+    },
+    {
+      'title': 'Documents & Others',
+      'icon': Icons.drive_file_move,
+      'path': '',
+      'color': Colors.pink
+    },
+    {'title': 'Apps', 'icon': Icons.android, 'path': '', 'color': Colors.green},
+    {
+      'title': 'Whatsapp Statuses',
+      'icon': Icons.wifi_calling,
+      'path': '',
+      'color': Colors.green
+    },
+  ];
+
+  static List sortList = [
+    'File name (A to Z)',
+    'File name (Z to A)',
+    'Date (oldest first)',
+    'Date (newest first)',
+    'Size (largest first)',
+    'Size (Smallest first)',
+  ];
 }

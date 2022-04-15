@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:shareme/configfile.dart';
 import 'package:shareme/navigators%20&%20view/theme_app.dart';
+import 'package:shareme/service/categoryprovider.dart';
+import 'package:shareme/service/coreprovider.dart';
 
 import 'package:shareme/service/themeservice.dart';
 import 'package:shareme/ui/homescreen.dart';
@@ -24,7 +26,9 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Languagemanager()),
-        ChangeNotifierProvider(create: (_) => thememanager())
+        ChangeNotifierProvider(create: (_) => thememanager()),
+        ChangeNotifierProvider(create: (_) => CoreProvider()),
+        ChangeNotifierProvider(create: (_) => categoryprovider()),
       ],
       child: const Shareme(),
     ),

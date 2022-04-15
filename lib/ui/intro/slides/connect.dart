@@ -83,7 +83,7 @@ class connectslide extends StatelessWidget {
               SlideTransition(
                 position: _relaxAnimation,
                 child: const Text(
-                  "Connect",
+                  'Connect',
                   style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -93,7 +93,7 @@ class connectslide extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                   child: Text(
-                    "Support cross platform file transfer and sharing between Android and iOS, and to PC/MAC as well.",
+                    'Support cross platform file transfer and sharing between Android and iOS, and to PC/MAC as well.',
                     textAlign: TextAlign.center,
                   ),
                 ),

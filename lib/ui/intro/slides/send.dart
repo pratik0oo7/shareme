@@ -112,9 +112,9 @@ class sendslide extends StatelessWidget {
                 child: SlideTransition(
                   position: _relaxSecondHalfAnimation,
                   child: const Text(
-                    "Share things",
-                    style: const TextStyle(
-                        fontSize: 26.0, fontWeight: FontWeight.bold),
+                    'Share things',
+                    style: TextStyle(
+                        fontSize: 26.0, fontWeight: FontWeight.bold,),
                   ),
                 ),
               ),
@@ -122,7 +122,7 @@ class sendslide extends StatelessWidget {
                 padding:
                     EdgeInsets.only(left: 64, right: 64, bottom: 16, top: 16),
                 child: Text(
-                  "This can transfer and share any type of files, from photos, documents, to music, videos, even apps without mobile data usage.",
+                  'This can transfer and share any type of files, from photos, documents, to music, videos, even apps without mobile data usage.',
                   textAlign: TextAlign.center,
                 ),
               ),

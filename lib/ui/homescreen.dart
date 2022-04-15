@@ -75,6 +75,7 @@ class _homeScreenState extends State<homeScreen> {
         body: RepaintBoundary(
           key: _globalKey,
           child: Scaffold(
+            backgroundColor: Colors.deepOrange.shade50,
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -129,7 +130,7 @@ class _homeScreenState extends State<homeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 18),
                   height: 64,
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple.shade100,
+                    color: Colors.indigo.shade100,
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(24),
                       topRight: Radius.circular(24),
@@ -137,93 +138,69 @@ class _homeScreenState extends State<homeScreen> {
                   ),
                   child: Row(
                     children: [
-                      TransparentButton(
-                        SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: Icon(
-                            LucideIcons.languages,
-                            color: Colors.deepPurple.shade700,
-                            size: 20,
-                          ),
+                      IconButton(
+                        icon: Icon(
+                          LucideIcons.languages,
+                          size: 20,
                         ),
-                        () => SharemeRoute.navigateTo(
-                          _globalKey,
-                          Screens.languagePicker,
-                          RouteDirection.left,
-                        ),
-                        TransparentButtonBackground.purpleLight,
+                        onPressed: () {
+                          SharemeRoute.navigateTo(
+                            _globalKey,
+                            Screens.languagePicker,
+                            RouteDirection.left,
+                          );
+                        },
                       ),
                       const SizedBox(width: 2),
-                      TransparentButton(
-                        SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: Icon(
-                            LucideIcons.helpCircle,
-                            color: Colors.deepPurple.shade700,
-                            size: 20,
-                          ),
+                      IconButton(
+                        icon: Icon(
+                          LucideIcons.helpCircle,
+                          size: 20,
                         ),
-                        () => SharemeRoute.navigateTo(
-                          _globalKey,
-                          Screens.intro,
-                          RouteDirection.left,
-                        ),
-                        TransparentButtonBackground.purpleLight,
+                        onPressed: () {
+                          SharemeRoute.navigateTo(
+                            _globalKey,
+                            Screens.intro,
+                            RouteDirection.left,
+                          );
+                        },
                       ),
                       const SizedBox(width: 2),
-                      TransparentButton(
-                        SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: Icon(
-                            LucideIcons.settings,
-                            color: Colors.deepPurple.shade700,
-                            size: 20,
-                          ),
+                      IconButton(
+                        icon: Icon(
+                          LucideIcons.settings2,
+                          color: Colors.deepPurple.shade700,
+                          size: 20,
                         ),
-                        () => SharemeRoute.navigateTo(
-                          _globalKey,
-                          Screens.settings,
-                          RouteDirection.right,
-                        ),
-                        TransparentButtonBackground.purpleLight,
-                      ),
-                      TransparentButton(
-                        SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: Icon(
-                            LucideIcons.lightbulb,
-                            color: Colors.deepPurple.shade700,
-                            size: 20,
-                          ),
-                        ),
-                        () => context.read<thememanager>().change(),
-                        TransparentButtonBackground.purpleLight,
+                        onPressed: () {
+                          SharemeRoute.navigateTo(
+                            _globalKey,
+                            Screens.settings,
+                            RouteDirection.left,
+                          );
+                        },
                       ),
                       const Spacer(),
-                      TransparentButton(
-                        Text(
-                          'share Me v$currentVersion →',
+                      TextButton(
+                        child: Text(
+                          'v$currentVersion ',
                           style: GoogleFonts.jetBrainsMono(
                             fontSize: 16,
-                            color: Colors.deepPurple.shade700,
                           ),
                         ),
-                        () => SharemeRoute.navigateTo(
-                          _globalKey,
-                          Screens.about,
-                          RouteDirection.right,
-                        ),
-                        TransparentButtonBackground.purpleLight,
+                        onPressed: () {
+                          SharemeRoute.navigateTo(
+                            _globalKey,
+                            Screens.about,
+                            RouteDirection.right,
+                          );
+                        },
                       ),
                     ],
                   ),
                 ),
                 Container(
-                  color: Colors.deepPurple.shade100,
+                  // color: Colors.deepPurple.shade100,
                   child: SafeArea(
                     top: false,
                     right: false,
@@ -280,32 +257,36 @@ class _homeScreenState extends State<homeScreen> {
   }
 
   Widget _sharingButtons(BuildContext con) {
-    return Column(
-      children: [
-        PrimaryButton(
-          height: 110,
-          onClick: () async {
-            final obj = await opendialog(context, const Send());
-            if (obj != null) {
-              _shareFile(obj);
-            }
-          },
-          text: con.l.homeSend,
-          secondaryIcon: Icon(
-            LucideIcons.upload,
-            size: 42,
-            color: Colors.deepPurple.shade200.withOpacity(0.8),
+    return Padding(
+      padding: const EdgeInsets.only(top: 150.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          FloatingActionButton.large(
+            onPressed: () async {
+              final obj = await opendialog(context, const Send());
+              if (obj != null) {
+                _shareFile(obj);
+              }
+            },
+            child: Icon(
+              LucideIcons.upload,
+              size: 42,
+            ),
           ),
-        ),
-        const SizedBox(height: 12),
-        PrimaryButton(
-          height: 60,
-          onClick: () async {
-            opendialog(context, receive());
-          },
-          text: con.l.homeReceive,
-        )
-      ],
+          const SizedBox(width: 20),
+          FloatingActionButton.large(
+            onPressed: () async {
+              opendialog(context, receive());
+            },
+            child: Icon(
+              LucideIcons.download,
+              size: 42,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

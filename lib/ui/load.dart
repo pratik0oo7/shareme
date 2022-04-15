@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import, depend_on_referenced_packages, unnecessary_import, use_build_context_synchronously, avoid_print
 
+import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
@@ -10,14 +11,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
+import 'package:shareme/box/dialog.dart';
+import 'package:shareme/navigators%20&%20view/navigate.dart';
 import 'package:shareme/configfile.dart';
 import 'package:shareme/helper.dart';
 import 'package:shareme/navigators%20&%20view/page_route.dart';
 import 'package:shareme/service/languageservice.dart';
 import 'package:shareme/service/localizationservice.dart';
 import 'package:shareme/service/themeservice.dart';
+import 'package:shareme/ui/main_screen.dart';
 import 'package:widget_to_image/widget_to_image.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -33,6 +38,32 @@ class _LoadingScreenState extends State<LoadingScreen> {
     super.initState();
 
     init();
+  }
+
+  startTimeout() async {
+    return Timer(Duration(seconds: 2), handleTimeout);
+  }
+
+  void handleTimeout() {
+    changeScreen();
+  }
+
+  changeScreen() async {
+    PermissionStatus status = await Permission.storage.status;
+    if (!status.isGranted) {
+      requestPermission();
+    } else {
+      navigate.pushpagereplacement(context, MainScreen());
+    }
+  }
+
+  requestPermission() async {
+    PermissionStatus status = await Permission.storage.request();
+    if (status.isGranted) {
+      navigate.pushpagereplacement(context, MainScreen());
+    } else {
+      Dialogs.showToast('Please Grant Storage Permissions');
+    }
   }
 
   Future<void> init() async {
@@ -139,8 +170,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
       SharemeRoute.navigateTo(
         _globalKey,
         Hive.box<String>('strings').containsKey('language')
-            ? Screens.home
-            : Screens.home,
+            ? Screens.main
+            : Screens.intro,
         // : Screens.intro,
         RouteDirection.right,
       );
@@ -177,7 +208,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                         child: Image.asset(
                           'assets/logo.png',
                           height: 60,
-                          color: Color(0xff132137),
+                          color: const Color(0xff132137),
                         ),
                       ),
                     ),
@@ -187,7 +218,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                         child: Image.asset(
                           'assets/logo_inverse.png',
                           height: 60,
-                          color: Color(0xff132137),
+                          color: const Color(0xff132137),
                         ),
                       ),
                     ),
