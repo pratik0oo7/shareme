@@ -8,7 +8,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shareme/box/customalert.dart';
 
-import '../service/localizationservice.dart';
+import '../service/sharingobject_service.dart';
 
 // todo not only file model but generic interface
 Future<shareObject?> opendialog(BuildContext context, Widget dialog,

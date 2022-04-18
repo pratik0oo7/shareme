@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:shareme/configfile.dart';
 import 'package:shareme/service/ipservice.dart';
-import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/sharingobject_service.dart';
 
 
 class ReceiverService extends ChangeNotifier {

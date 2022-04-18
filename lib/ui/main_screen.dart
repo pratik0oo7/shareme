@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:shareme/service/coreprovider.dart';
-import 'package:shareme/ui/file/browse.dart';
+import 'package:shareme/ui/browser/browser.dart';
+// import 'package:shareme/service/coreprovider.dart';
+// import 'package:shareme/ui/file/browse.dart';
 import 'package:shareme/ui/homescreen.dart';
 import 'package:shareme/ui/settingScreen.dart';
 
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     _pageController = PageController(initialPage: 0);
     SchedulerBinding.instance!.addPostFrameCallback((_) {
-      Provider.of<CoreProvider>(context, listen: false).checkSpace();
+      // Provider.of<CoreProvider>(context, listen: false).checkSpace();
     });
   }
 
@@ -46,9 +47,9 @@ class _MainScreenState extends State<MainScreen> {
         controller: _pageController,
         onPageChanged: onPageChanged,
         children: <Widget>[
-          Browse(),
+          browserScreen(),
           homeScreen(),
-          const settingScreen(),
+          settingScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

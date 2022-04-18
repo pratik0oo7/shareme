@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shareme/helper.dart';
 import 'package:shareme/navigators%20&%20view/buttons.dart';
-import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/sharingobject_service.dart';
 
 import '../helper.dart';
 

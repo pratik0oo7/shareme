@@ -1,7 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages, implementation_imports, prefer_const_constructors, avoid_classes_with_only_static_members, avoid_dynamic_calls
 
 import 'package:flutter/material.dart';
-import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/sharingobject_service.dart';
 import 'package:shareme/ui/aboutScreen.dart';
 import 'package:shareme/ui/errorscreen.dart';
 import 'package:shareme/ui/homescreen.dart';

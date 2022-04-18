@@ -9,7 +9,7 @@ import 'package:shareme/box/dialog.dart';
 import 'package:shareme/box/selectnetwork.dart';
 import 'package:shareme/helper.dart';
 import 'package:shareme/navigators%20&%20view/buttons.dart';
-import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/sharingobject_service.dart';
 import 'package:shareme/service/receiveservice.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wakelock/wakelock.dart';

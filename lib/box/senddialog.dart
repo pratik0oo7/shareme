@@ -13,7 +13,7 @@ import 'package:shareme/box/sharetext.dart';
 import 'package:shareme/helper.dart';
 import 'package:shareme/main.dart';
 import 'package:shareme/navigators%20&%20view/buttons.dart';
-import 'package:shareme/service/localizationservice.dart';
+import 'package:shareme/service/sharingobject_service.dart';
 
 class Send extends StatelessWidget {
   const Send({Key? key}) : super(key: key);

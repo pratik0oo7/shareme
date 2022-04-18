@@ -84,3 +84,78 @@ class _TrackboxState extends State<Trackbox> {
     );
   }
 }
+
+class TrackingConsentDialog extends StatefulWidget {
+  const TrackingConsentDialog({Key? key}) : super(key: key);
+
+  @override
+  _TrackingConsentDialogState createState() => _TrackingConsentDialogState();
+}
+
+class _TrackingConsentDialogState extends State<TrackingConsentDialog> {
+  int _timer = 5;
+
+  void _tick() {
+    if (_timer == 0) {
+      return;
+    }
+
+    Future.delayed(const Duration(seconds: 1), () {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _timer--;
+      });
+      _tick();
+    });
+  }
+
+  @override
+  void initState() {
+    _tick();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+        elevation: 0,
+        insetPadding: const EdgeInsets.all(24),
+        title: Text(
+          'Tracking',
+          // context.l.settingsTracking,
+          style: GoogleFonts.comfortaa(
+            // context.l.fontComfortaa,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        actions: [
+          DialogTextButton(
+              '${'Disable'}${_timer > 0 ? ' ($_timer)' : ''}',
+              _timer > 0
+                  ? null
+                  : () {
+                      Hive.box<String>('strings').put('tracking', '0');
+                      Navigator.of(context).pop();
+                    }),
+          DialogTextButton('Allow',
+              // ontext.l.settingsTrackingAllow,
+              () {
+            Hive.box<String>('strings').put('tracking', '1');
+            Navigator.of(context).pop();
+          }),
+        ],
+        scrollable: true,
+        content: MarkdownBody(
+          // data: context.l.settingsTrackingDescription,
+          data:
+              'Sync and share incorporates privacy-respecting tracking to learn more about the audience of the app. We are using the analytics data to plan new features, and prioritize tasks.\n\nThe collected information does not include IP address or any other identifying information.',
+          styleSheet: MarkdownStyleSheet(
+            p: GoogleFonts.jetBrainsMono(fontSize: 14),
+          ),
+          listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
+        ));
+  }
+}

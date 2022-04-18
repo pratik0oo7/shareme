@@ -9,9 +9,11 @@ class aboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepOrange.shade50,
-      body: Container(
-        color: Colors.amber,
-        child: Text('about'),
+      body: Center(
+        child: Container(
+          color: Colors.amber,
+          child: Text('about!!!'),
+        ),
       ),
     );
   }
